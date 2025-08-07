@@ -19,7 +19,7 @@ class Servo:
         max_us = max_us if min_us < max_us < (1000 // freq) * 1000 else 0
         self._curr_duty = 0
         self.dead_zone_us = dead_zone_us
-
+    
     def set_duty(self, duty_us: int):
         self._curr_duty = duty_us
         self.pwm.duty_ns(duty_us * 1000)

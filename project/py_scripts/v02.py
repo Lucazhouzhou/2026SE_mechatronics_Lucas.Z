@@ -2,7 +2,7 @@ import time
 from servo import Servo
 from machine import Pin, PWM
 
-servo_pwm = PWM(Pin(16))
+servo_pwm = PWM(Pin(18))
 
 # Set the parameters of the servo pulses, more details in the "Documentation" section
 freq = 50

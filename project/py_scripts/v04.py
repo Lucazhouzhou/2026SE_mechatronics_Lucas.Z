@@ -1,10 +1,14 @@
+"""
+Sample code for a simple state machine
+"""
+
 from machine import Pin, PWM
 from servo import Servo
 from machine import RTC
 
 
 # create a PWM servo controller (16 - pin Pico)
-servo_pwm = PWM(Pin(16))
+servo_pwm = PWM(Pin(18))
 rtc = RTC()
 
 # Set the parameters of the servo pulses, more details in the "Documentation" section
