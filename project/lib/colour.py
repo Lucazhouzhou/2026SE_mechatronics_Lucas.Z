@@ -16,7 +16,7 @@ class Colour:
     def isgreen(self):
         colour = colourSensor.readHSV()
         hue = colour['hue']
-        if hue > 60 and hue < 160 :
+        if 80 < hue < 160:
             return True
         else :
             return False
