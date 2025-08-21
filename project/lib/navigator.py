@@ -32,16 +32,28 @@ class Navigator():
                     self.__showstate(self.state)
                     self.__stop()
                     sleep_ms(200)
+                    self.state = "TURNINGLEFT"
+                    self.__showstate(self.state)
                     self.__turnleft()
                     sleep_ms(519)
             elif not self.__wallincoming() and not self.__rightsidehaswall() :
+<<<<<<< HEAD
                     self.__forwardfast()
                     sleep_ms(500)
                     self.__stop()
                     sleep_ms(200)
                     self.state = "TURNING RIGHT"
+=======
+                    self.state = "FACEDWALL"
+                    self.__showstate(self.state)
+                    self.__stop()
+                    sleep_ms(200)
+                    self.state = "TURNINGLEFT"
+>>>>>>> a04b3cc (latenight)
                     self.__showstate(self.state)
                     self.__turnright()
                     sleep_ms(519)
             else :
                 self.__forwardfast()
+                self.state = "RUNNING"
+                self.__showstate(self.state)
