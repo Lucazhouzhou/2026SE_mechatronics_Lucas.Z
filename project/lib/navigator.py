@@ -45,3 +45,4 @@ class Navigator():
                     sleep_ms(519)
             else :
                 self.__forwardfast()
+                self.state = "IDLE"

@@ -4,9 +4,11 @@ from wheels import Wheels
 sonic = Ultrasonic(debug=True)
 car = Wheels(18,20,debug=True)
 while True :
-    print(sonic.wallincoming(45))
-    sleep_ms(100)
-    car.forwardslow()
-    if sonic.wallincoming(45):
-        car.stop()
-        sleep_ms(1000)
+    sonic.getsidedistance()
+    sleep_ms(1000)
+    sonic.getfrontdistance()
+    sleep_ms(1000)
+    sonic.rightsidehaswall()
+    sleep_ms(1000)
+    sonic.wallincoming(100)
+    sleep_ms(1000)
