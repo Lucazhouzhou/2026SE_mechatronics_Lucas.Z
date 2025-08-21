@@ -5,9 +5,7 @@ class OLED:
     def __init__(self, debug=False):
         self._debug = debug
         self._display = create_PiicoDev_SSD1306()
-        if self._debug:
-            print("[OLED] Display initialized")
-
+        
     def clear(self):
         self._display.fill(0)
         self._display.show()
