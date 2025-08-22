@@ -1,9 +1,9 @@
 from PiicoDev_Unified import sleep_ms
 from colour import Colour
 
-colours = Colour(debug = False)
+colours = Colour(debug = True)
 while True:
-    print(str(colours.gethue()))
+    colours.gethue()
     sleep_ms(100)
     if colours.isgreen():
         print("green")

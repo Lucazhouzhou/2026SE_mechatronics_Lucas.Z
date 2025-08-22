@@ -4,10 +4,10 @@ from machine import Pin
 
 
 # File name of the script to import
-file_name = "testultrasonic"
+file_name = "testnavi"
 
 # Add the path to the sys.path
-sys.path.append("/py_scripts")
+sys.path.append("/Unit tests")
 
 # Create a stop pin to stop the main loop
 stop_pin = Pin(4, Pin.IN, Pin.PULL_UP)

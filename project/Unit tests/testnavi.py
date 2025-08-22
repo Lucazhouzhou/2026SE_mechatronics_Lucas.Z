@@ -9,7 +9,7 @@ sonic = Ultrasonic(debug=False)
 car = Wheels(18, 20, debug=False)
 oled = OLED(debug=True)
 nav = Navigator(isgreen=colours.isgreen,
-wallincoming=lambda:sonic.wallincoming(44),
+wallincoming=lambda:sonic.wallincoming(150),
 rightsidehaswall=sonic.rightsidehaswall,
 forwardfast=car.forwardfast,
 forwardslow=car.forwardslow,

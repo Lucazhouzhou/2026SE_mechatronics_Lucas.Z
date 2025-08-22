@@ -27,22 +27,26 @@ class Navigator():
                 self.__showstate(self.state)
                 self.__stop()
                 sleep_ms(500)
-            if self.__wallincoming():
+            if not self.__wallincoming() and not self.__rightsidehaswall() :
+                    self.state = "FACEDTURN"
+                    self.__showstate(self.state)
+                    self.__stop()
+                    sleep_ms(200)
+                    self.state = "TURNING right"
+                    self.__showstate(self.state)
+                    self.__turnright()
+                    sleep_ms(515)
+            elif self.__wallincoming():
                     self.state = "TURNING LEFT"
                     self.__showstate(self.state)
                     self.__stop()
                     sleep_ms(200)
-                    self.__turnleft()
-                    sleep_ms(519)
-            elif not self.__wallincoming() and not self.__rightsidehaswall() :
-                    self.__forwardfast()
-                    sleep_ms(500)
-                    self.__stop()
-                    sleep_ms(200)
-                    self.state = "TURNING RIGHT"
+                    self.state = "TURNINGLEFT"
                     self.__showstate(self.state)
-                    self.__turnright()
-                    sleep_ms(519)
+                    self.__turnleft()
+                    sleep_ms(515)
             else :
                 self.__forwardfast()
                 self.state = "IDLE"
+                self.__showstate(self.state)
+                sleep_ms(500)
