@@ -38,15 +38,15 @@ class Wheels:
     def turnleft(self):
         if self.__debug :
             print("Turning right")
-        self.left_servo.set_duty(500)
-        self.rigth_servo.set_duty(500)
+        self.left_servo.set_duty(1000)
+        self.rigth_servo.set_duty(1000)
         self.wheels_state = "Turn right"
 
     def turnright(self):
         if self.__debug :
             print("Turning left")
-        self.left_servo.set_duty(2500)
-        self.rigth_servo.set_duty(2500)
+        self.left_servo.set_duty(2000)
+        self.rigth_servo.set_duty(2000)
         self.wheels_state = "Turn left"
 
     def away(self):

@@ -14,7 +14,8 @@ class Ultrasonic:
         return distance
 
     def getsidedistance(self):
-        distance = self.__side.distance_mm
+        c = self.__side.distance_mm 
+        distance = c
         if self.__debug:
             print(f"Side distance: {distance} mm")
         return distance
@@ -26,11 +27,11 @@ class Ultrasonic:
                 print(f"Wall detected at {distance} mm (threshold: {threshold} mm)")
             return True
         return False
-    
+
     def rightsidehaswall(self):
         sidedistance = self.getsidedistance()
-        if sidedistance is not None and sidedistance < 150:
+        if sidedistance is not None and sidedistance < 132:
             if self.__debug:
-                print(f"Wall detected at {sidedistance} mm (threshold: 200 mm)")
+                print(f"Wall detected at {sidedistance} mm (threshold: 150 mm)")
             return True
         return False

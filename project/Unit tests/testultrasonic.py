@@ -1,4 +1,5 @@
-from ultrasonicsensor import Ultrasonic
+from PiicoDev_Unified import sleep_ms
+from ultrasonic import Ultrasonic
 ultra = Ultrasonic(debug=True)
 
 threshold = 100
